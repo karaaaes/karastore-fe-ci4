@@ -1,0 +1,130 @@
+CRITICAL - 2023-06-06 05:07:54 --> App\Controllers\BuyDetails::add(): Failed opening required 'C:\laragon\www\karastore\app\ThirdParty\Midtrans\Midtrans.php' (include_path='.;C:/laragon/etc/php/pear')
+in APPPATH\Controllers\BuyDetails.php on line 80.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2023-06-06 05:08:44 --> App\Controllers\BuyDetails::add(): Failed opening required 'C:\laragon\www\karastore\app\ThirdParty\Midtrans\Midtrans.php' (include_path='.;C:/laragon/etc/php/pear')
+in APPPATH\Controllers\BuyDetails.php on line 80.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2023-06-06 05:11:16 --> Midtrans API is returning API error. HTTP status code: 400 API response: {"error_messages":["transaction_details.gross_amount is not a number"]}
+in APPPATH\ThirdParty\vendor\midtrans\midtrans-php\Midtrans\ApiRequestor.php on line 167.
+ 1 APPPATH\ThirdParty\vendor\midtrans\midtrans-php\Midtrans\ApiRequestor.php(39): Midtrans\ApiRequestor::remoteCall('https://app.sandbox.midtrans.com/snap/v1/transactions', 'SB-Mid-server-C04sTanCfIT19VVZdtnZhryz', [...], 'POST')
+ 2 APPPATH\ThirdParty\vendor\midtrans\midtrans-php\Midtrans\Snap.php(109): Midtrans\ApiRequestor::post('https://app.sandbox.midtrans.com/snap/v1/transactions', 'SB-Mid-server-C04sTanCfIT19VVZdtnZhryz', [...])
+ 3 APPPATH\ThirdParty\vendor\midtrans\midtrans-php\Midtrans\Snap.php(36): Midtrans\Snap::createTransaction([...])
+ 4 APPPATH\Controllers\BuyDetails.php(104): Midtrans\Snap::getSnapToken([...])
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\BuyDetails->add('4ac3914b07ef')
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BuyDetails))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\karastore\\public\\index.php')
+CRITICAL - 2023-06-06 05:11:43 --> Midtrans API is returning API error. HTTP status code: 400 API response: {"error_messages":["transaction_details.gross_amount is not a number"]}
+in APPPATH\ThirdParty\vendor\midtrans\midtrans-php\Midtrans\ApiRequestor.php on line 167.
+ 1 APPPATH\ThirdParty\vendor\midtrans\midtrans-php\Midtrans\ApiRequestor.php(39): Midtrans\ApiRequestor::remoteCall('https://app.sandbox.midtrans.com/snap/v1/transactions', 'SB-Mid-server-C04sTanCfIT19VVZdtnZhryz', [...], 'POST')
+ 2 APPPATH\ThirdParty\vendor\midtrans\midtrans-php\Midtrans\Snap.php(109): Midtrans\ApiRequestor::post('https://app.sandbox.midtrans.com/snap/v1/transactions', 'SB-Mid-server-C04sTanCfIT19VVZdtnZhryz', [...])
+ 3 APPPATH\ThirdParty\vendor\midtrans\midtrans-php\Midtrans\Snap.php(36): Midtrans\Snap::createTransaction([...])
+ 4 APPPATH\Controllers\BuyDetails.php(104): Midtrans\Snap::getSnapToken([...])
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\BuyDetails->add('4ac3914b07ef')
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BuyDetails))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\karastore\\public\\index.php')
+CRITICAL - 2023-06-06 05:11:43 --> Uncaught TypeError: Return value of CodeIgniter\Language\Language::requireFile() must be of the type array, int returned in C:\laragon\www\karastore\system\Language\Language.php:262
+Stack trace:
+#0 C:\laragon\www\karastore\system\Language\Language.php(223): CodeIgniter\Language\Language->requireFile('Language/en/Err...')
+#1 C:\laragon\www\karastore\system\Language\Language.php(164): CodeIgniter\Language\Language->load('Errors', 'en')
+#2 C:\laragon\www\karastore\system\Language\Language.php(99): CodeIgniter\Language\Language->parseLine('whoops', 'en')
+#3 C:\laragon\www\karastore\system\Common.php(773): CodeIgniter\Language\Language->getLine('Errors.whoops', Array)
+#4 C:\laragon\www\karastore\app\Views\errors\html\production.php(7): lang('Errors.whoops')
+#5 C:\laragon\www\karastore\system\Debug\Exceptions.php(282): include('C:\\laragon\\www\\...')
+#6 C:\laragon\www\karastore\system\Debug\Exceptions.php(285): CodeIgniter\Debug\Exceptions->CodeIgniter\Debug\{closure}()
+#7 C:\laragon\www\karastore\system\Debug\Exc
+【Previous Exception】
+Exception
+Midtrans API is returning API error. HTTP status code: 400 API response: {"error_messages":["transaction_details.gross_amount is not a number"]}
+#0 C:\laragon\www\karastore\app\ThirdParty\vendor\midtrans\midtrans-php\Midtrans\ApiRequestor.php(39): Midtrans\ApiRequestor::remoteCall('https://app.san...', 'SB-Mid-server-C...', Array, 'POST')
+#1 C:\laragon\www\karastore\app\ThirdParty\vendor\midtrans\midtrans-php\Midtrans\Snap.php(109): Midtrans\ApiRequestor::post('https://app.san...', 'SB-Mid-server-C...', Array)
+#2 C:\laragon\www\karastore\app\ThirdParty\vendor\midtrans\midtrans-php\Midtrans\Snap.php(36): Midtrans\Snap::createTransaction(Array)
+#3 C:\laragon\www\karastore\app\Controllers\BuyDetails.php(104): Midtrans\Snap::getSnapToken(Array)
+#4 C:\laragon\www\karastore\system\CodeIgniter.php(934): App\Controllers\BuyDetails->add('4ac3914b07ef')
+#5 C:\laragon\www\karastore\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BuyDetails))
+#6 C:\laragon\www\karastore\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\laragon\www\karastore\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#8 C:\laragon\www\karastore\system\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\...')
+#9 {main}
+in SYSTEMPATH\Language\Language.php on line 262.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2023-06-06 05:14:43 --> Midtrans API is returning API error. HTTP status code: 400 API response: {"error_messages":["transaction_details.gross_amount is not a number"]}
+in APPPATH\ThirdParty\vendor\midtrans\midtrans-php\Midtrans\ApiRequestor.php on line 167.
+ 1 APPPATH\ThirdParty\vendor\midtrans\midtrans-php\Midtrans\ApiRequestor.php(39): Midtrans\ApiRequestor::remoteCall('https://app.sandbox.midtrans.com/snap/v1/transactions', 'SB-Mid-server-C04sTanCfIT19VVZdtnZhryz', [...], 'POST')
+ 2 APPPATH\ThirdParty\vendor\midtrans\midtrans-php\Midtrans\Snap.php(109): Midtrans\ApiRequestor::post('https://app.sandbox.midtrans.com/snap/v1/transactions', 'SB-Mid-server-C04sTanCfIT19VVZdtnZhryz', [...])
+ 3 APPPATH\ThirdParty\vendor\midtrans\midtrans-php\Midtrans\Snap.php(36): Midtrans\Snap::createTransaction([...])
+ 4 APPPATH\Controllers\BuyDetails.php(104): Midtrans\Snap::getSnapToken([...])
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\BuyDetails->add('4ac3914b07ef')
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BuyDetails))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\karastore\\public\\index.php')
+CRITICAL - 2023-06-06 05:14:45 --> Midtrans API is returning API error. HTTP status code: 400 API response: {"error_messages":["transaction_details.gross_amount is not a number"]}
+in APPPATH\ThirdParty\vendor\midtrans\midtrans-php\Midtrans\ApiRequestor.php on line 167.
+ 1 APPPATH\ThirdParty\vendor\midtrans\midtrans-php\Midtrans\ApiRequestor.php(39): Midtrans\ApiRequestor::remoteCall('https://app.sandbox.midtrans.com/snap/v1/transactions', 'SB-Mid-server-C04sTanCfIT19VVZdtnZhryz', [...], 'POST')
+ 2 APPPATH\ThirdParty\vendor\midtrans\midtrans-php\Midtrans\Snap.php(109): Midtrans\ApiRequestor::post('https://app.sandbox.midtrans.com/snap/v1/transactions', 'SB-Mid-server-C04sTanCfIT19VVZdtnZhryz', [...])
+ 3 APPPATH\ThirdParty\vendor\midtrans\midtrans-php\Midtrans\Snap.php(36): Midtrans\Snap::createTransaction([...])
+ 4 APPPATH\Controllers\BuyDetails.php(104): Midtrans\Snap::getSnapToken([...])
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\BuyDetails->add('4ac3914b07ef')
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BuyDetails))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\karastore\\public\\index.php')
+CRITICAL - 2023-06-06 05:15:42 --> Midtrans API is returning API error. HTTP status code: 400 API response: {"error_messages":["transaction_details.gross_amount is not a number"]}
+in APPPATH\ThirdParty\vendor\midtrans\midtrans-php\Midtrans\ApiRequestor.php on line 167.
+ 1 APPPATH\ThirdParty\vendor\midtrans\midtrans-php\Midtrans\ApiRequestor.php(39): Midtrans\ApiRequestor::remoteCall('https://app.sandbox.midtrans.com/snap/v1/transactions', 'SB-Mid-server-C04sTanCfIT19VVZdtnZhryz', [...], 'POST')
+ 2 APPPATH\ThirdParty\vendor\midtrans\midtrans-php\Midtrans\Snap.php(109): Midtrans\ApiRequestor::post('https://app.sandbox.midtrans.com/snap/v1/transactions', 'SB-Mid-server-C04sTanCfIT19VVZdtnZhryz', [...])
+ 3 APPPATH\ThirdParty\vendor\midtrans\midtrans-php\Midtrans\Snap.php(36): Midtrans\Snap::createTransaction([...])
+ 4 APPPATH\Controllers\BuyDetails.php(104): Midtrans\Snap::getSnapToken([...])
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\BuyDetails->add('4ac3914b07ef')
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BuyDetails))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\karastore\\public\\index.php')
+CRITICAL - 2023-06-06 05:16:30 --> Midtrans API is returning API error. HTTP status code: 400 API response: {"error_messages":["transaction_details.gross_amount is not a number"]}
+in APPPATH\ThirdParty\vendor\midtrans\midtrans-php\Midtrans\ApiRequestor.php on line 167.
+ 1 APPPATH\ThirdParty\vendor\midtrans\midtrans-php\Midtrans\ApiRequestor.php(39): Midtrans\ApiRequestor::remoteCall('https://app.sandbox.midtrans.com/snap/v1/transactions', 'SB-Mid-server-C04sTanCfIT19VVZdtnZhryz', [...], 'POST')
+ 2 APPPATH\ThirdParty\vendor\midtrans\midtrans-php\Midtrans\Snap.php(109): Midtrans\ApiRequestor::post('https://app.sandbox.midtrans.com/snap/v1/transactions', 'SB-Mid-server-C04sTanCfIT19VVZdtnZhryz', [...])
+ 3 APPPATH\ThirdParty\vendor\midtrans\midtrans-php\Midtrans\Snap.php(36): Midtrans\Snap::createTransaction([...])
+ 4 APPPATH\Controllers\BuyDetails.php(104): Midtrans\Snap::getSnapToken([...])
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\BuyDetails->add('4ac3914b07ef')
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BuyDetails))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\karastore\\public\\index.php')
+CRITICAL - 2023-06-06 05:17:19 --> Midtrans API is returning API error. HTTP status code: 400 API response: {"error_messages":["transaction_details.gross_amount is not a number"]}
+in APPPATH\ThirdParty\vendor\midtrans\midtrans-php\Midtrans\ApiRequestor.php on line 167.
+ 1 APPPATH\ThirdParty\vendor\midtrans\midtrans-php\Midtrans\ApiRequestor.php(39): Midtrans\ApiRequestor::remoteCall('https://app.sandbox.midtrans.com/snap/v1/transactions', 'SB-Mid-server-C04sTanCfIT19VVZdtnZhryz', [...], 'POST')
+ 2 APPPATH\ThirdParty\vendor\midtrans\midtrans-php\Midtrans\Snap.php(109): Midtrans\ApiRequestor::post('https://app.sandbox.midtrans.com/snap/v1/transactions', 'SB-Mid-server-C04sTanCfIT19VVZdtnZhryz', [...])
+ 3 APPPATH\ThirdParty\vendor\midtrans\midtrans-php\Midtrans\Snap.php(36): Midtrans\Snap::createTransaction([...])
+ 4 APPPATH\Controllers\BuyDetails.php(104): Midtrans\Snap::getSnapToken([...])
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\BuyDetails->add('cbda181658e1')
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BuyDetails))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\karastore\\public\\index.php')
+CRITICAL - 2023-06-06 05:20:46 --> Midtrans API is returning API error. HTTP status code: 400 API response: {"error_messages":["customer_details.email format is invalid"]}
+in APPPATH\ThirdParty\vendor\midtrans\midtrans-php\Midtrans\ApiRequestor.php on line 167.
+ 1 APPPATH\ThirdParty\vendor\midtrans\midtrans-php\Midtrans\ApiRequestor.php(39): Midtrans\ApiRequestor::remoteCall('https://app.sandbox.midtrans.com/snap/v1/transactions', 'SB-Mid-server-C04sTanCfIT19VVZdtnZhryz', [...], 'POST')
+ 2 APPPATH\ThirdParty\vendor\midtrans\midtrans-php\Midtrans\Snap.php(109): Midtrans\ApiRequestor::post('https://app.sandbox.midtrans.com/snap/v1/transactions', 'SB-Mid-server-C04sTanCfIT19VVZdtnZhryz', [...])
+ 3 APPPATH\ThirdParty\vendor\midtrans\midtrans-php\Midtrans\Snap.php(36): Midtrans\Snap::createTransaction([...])
+ 4 APPPATH\Controllers\BuyDetails.php(104): Midtrans\Snap::getSnapToken([...])
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\BuyDetails->add('b4268baee942')
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BuyDetails))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\karastore\\public\\index.php')
+CRITICAL - 2023-06-06 05:36:56 --> Midtrans API is returning API error. HTTP status code: 401 API response: {"error_messages":["Access denied due to unauthorized transaction, please check client or server key","Visit https://snap-docs.midtrans.com/#request-headers for more details"]}
+in APPPATH\ThirdParty\vendor\midtrans\midtrans-php\Midtrans\ApiRequestor.php on line 167.
+ 1 APPPATH\ThirdParty\vendor\midtrans\midtrans-php\Midtrans\ApiRequestor.php(39): Midtrans\ApiRequestor::remoteCall('https://app.sandbox.midtrans.com/snap/v1/transactions', 'YOUR_SERVER_KEY', [...], 'POST')
+ 2 APPPATH\ThirdParty\vendor\midtrans\midtrans-php\Midtrans\Snap.php(109): Midtrans\ApiRequestor::post('https://app.sandbox.midtrans.com/snap/v1/transactions', 'YOUR_SERVER_KEY', [...])
+ 3 APPPATH\ThirdParty\vendor\midtrans\midtrans-php\Midtrans\Snap.php(36): Midtrans\Snap::createTransaction([...])
+ 4 APPPATH\Controllers\BuyDetails.php(97): Midtrans\Snap::getSnapToken([...])
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\BuyDetails->add('4a851316ae77')
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BuyDetails))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\karastore\\public\\index.php')

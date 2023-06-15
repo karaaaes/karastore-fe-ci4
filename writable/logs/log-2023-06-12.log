@@ -1,0 +1,35 @@
+CRITICAL - 2023-06-12 14:50:18 --> require(vendor/autoload.php): failed to open stream: No such file or directory
+in APPPATH\Controllers\BuyDetails.php on line 6.
+ 1 APPPATH\Controllers\BuyDetails.php(6): CodeIgniter\Debug\Exceptions->errorHandler(2, 'require(vendor/autoload.php): failed to open stream: No such file or directory', 'C:\\laragon\\www\\karastore\\app\\Controllers\\BuyDetails.php', 6, [...])
+ 2 APPPATH\Controllers\BuyDetails.php(6): require()
+ 3 SYSTEMPATH\Autoloader\Autoloader.php(312): include_once('C:\\laragon\\www\\karastore\\app\\Controllers\\BuyDetails.php')
+ 4 SYSTEMPATH\Autoloader\Autoloader.php(289): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\laragon\\www\\karastore\\app\\Controllers\\BuyDetails.php')
+ 5 SYSTEMPATH\Autoloader\Autoloader.php(267): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\BuyDetails')
+ 6 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\BuyDetails')
+ 7 [internal function]: spl_autoload_call('App\\Controllers\\BuyDetails')
+ 8 SYSTEMPATH\CodeIgniter.php(892): class_exists('\\App\\Controllers\\BuyDetails', true)
+ 9 SYSTEMPATH\CodeIgniter.php(486): CodeIgniter\CodeIgniter->startController()
+10 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\karastore\\public\\index.php')
+ERROR - 2023-06-12 14:53:27 --> file_get_contents(email_template.html): failed to open stream: No such file or directory
+ERROR - 2023-06-12 14:55:04 --> file_get_contents(email_template.html): failed to open stream: No such file or directory
+ERROR - 2023-06-12 14:57:18 --> Invalid file: "templates/email_template.php"
+ERROR - 2023-06-12 14:57:43 --> Invalid file: "templates/email_template.php"
+ERROR - 2023-06-12 14:59:24 --> Invalid file: "templates/email_template.php"
+ERROR - 2023-06-12 14:59:31 --> Invalid file: "templates/email_template.php"
+ERROR - 2023-06-12 15:00:04 --> SMTP Error: Could not connect to SMTP host. Connection failed. stream_socket_enable_crypto(): Peer certificate CN=`mulan.jagoanhosting.com' did not match expected CN=`mail.rakaeshardiansyah.my.id'
+ERROR - 2023-06-12 15:02:02 --> SMTP Error: Could not connect to SMTP host. Connection failed. stream_socket_enable_crypto(): Peer certificate CN=`mulan.jagoanhosting.com' did not match expected CN=`mail.rakaeshardiansyah.my.id'
+CRITICAL - 2023-06-12 15:21:12 --> require(C:\laragon\www\karastore\app\Views/../vendor/autoload.php): failed to open stream: No such file or directory
+in APPPATH\Views\index.php on line 1.
+ 1 APPPATH\Views\index.php(1): CodeIgniter\Debug\Exceptions->errorHandler(2, 'require(C:\\laragon\\www\\karastore\\app\\Views/../vendor/autoload.php): failed to open stream: No such file or directory', 'C:\\laragon\\www\\karastore\\app\\Views\\index.php', 1, [...])
+ 2 APPPATH\Views\index.php(1): require()
+ 3 SYSTEMPATH\View\View.php(213): include('C:\\laragon\\www\\karastore\\app\\Views\\index.php')
+ 4 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('index', [], true)
+ 6 APPPATH\Controllers\Home.php(108): view('index', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->index()
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\karastore\\public\\index.php')

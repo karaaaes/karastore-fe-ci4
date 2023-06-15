@@ -1,0 +1,812 @@
+ERROR - 2023-06-15 07:54:25 --> Error connecting to the database: mysqli_sql_exception: Access denied for user ''@'localhost' (using password: NO) in C:\laragon\www\karastore\system\Database\MySQLi\Connection.php:174
+Stack trace:
+#0 C:\laragon\www\karastore\system\Database\MySQLi\Connection.php(174): mysqli->real_connect('localhost', '', '', '', 3306, '', 0)
+#1 C:\laragon\www\karastore\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\laragon\www\karastore\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\laragon\www\karastore\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\laragon\www\karastore\system\Model.php(268): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\karastore\system\BaseModel.php(656): CodeIgniter\Model->doFirst()
+#6 C:\laragon\www\karastore\app\Controllers\CheckTransactions.php(27): CodeIgniter\BaseModel->first()
+#7 C:\laragon\www\karastore\system\CodeIgniter.php(934): App\Controllers\CheckTransactions->checkTransactionsCode()
+#8 C:\laragon\www\karastore\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CheckTransactions))
+#9 C:\laragon\www\karastore\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\laragon\www\karastore\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 C:\laragon\www\karastore\system\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\...')
+#12 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user ''@'localhost' (using password: NO) in C:\laragon\www\karastore\system\Database\MySQLi\Connection.php:218
+Stack trace:
+#0 C:\laragon\www\karastore\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\laragon\www\karastore\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\laragon\www\karastore\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\laragon\www\karastore\system\Model.php(268): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\laragon\www\karastore\system\BaseModel.php(656): CodeIgniter\Model->doFirst()
+#5 C:\laragon\www\karastore\app\Controllers\CheckTransactions.php(27): CodeIgniter\BaseModel->first()
+#6 C:\laragon\www\karastore\system\CodeIgniter.php(934): App\Controllers\CheckTransactions->checkTransactionsCode()
+#7 C:\laragon\www\karastore\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CheckTransactions))
+#8 C:\laragon\www\karastore\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\laragon\www\karastore\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 C:\laragon\www\karastore\system\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\...')
+#11 {main}
+CRITICAL - 2023-06-15 07:54:25 --> Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user ''@'localhost' (using password: NO)
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `transactions_games`
+WHERE `transaction_id` = :transaction_id:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Model.php(268): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(656): CodeIgniter\Model->doFirst()
+ 5 APPPATH\Controllers\CheckTransactions.php(27): CodeIgniter\BaseModel->first()
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\CheckTransactions->checkTransactionsCode()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CheckTransactions))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\karastore\\public\\index.php')
+ERROR - 2023-06-15 07:56:07 --> Error connecting to the database: mysqli_sql_exception: Access denied for user ''@'localhost' (using password: NO) in C:\laragon\www\karastore\system\Database\MySQLi\Connection.php:174
+Stack trace:
+#0 C:\laragon\www\karastore\system\Database\MySQLi\Connection.php(174): mysqli->real_connect('localhost', '', '', '', 3306, '', 0)
+#1 C:\laragon\www\karastore\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\laragon\www\karastore\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\laragon\www\karastore\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\laragon\www\karastore\system\Model.php(268): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\karastore\system\BaseModel.php(656): CodeIgniter\Model->doFirst()
+#6 C:\laragon\www\karastore\app\Controllers\CheckTransactions.php(27): CodeIgniter\BaseModel->first()
+#7 C:\laragon\www\karastore\system\CodeIgniter.php(934): App\Controllers\CheckTransactions->checkTransactionsCode()
+#8 C:\laragon\www\karastore\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CheckTransactions))
+#9 C:\laragon\www\karastore\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\laragon\www\karastore\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 C:\laragon\www\karastore\system\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\...')
+#12 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user ''@'localhost' (using password: NO) in C:\laragon\www\karastore\system\Database\MySQLi\Connection.php:218
+Stack trace:
+#0 C:\laragon\www\karastore\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\laragon\www\karastore\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\laragon\www\karastore\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\laragon\www\karastore\system\Model.php(268): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\laragon\www\karastore\system\BaseModel.php(656): CodeIgniter\Model->doFirst()
+#5 C:\laragon\www\karastore\app\Controllers\CheckTransactions.php(27): CodeIgniter\BaseModel->first()
+#6 C:\laragon\www\karastore\system\CodeIgniter.php(934): App\Controllers\CheckTransactions->checkTransactionsCode()
+#7 C:\laragon\www\karastore\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CheckTransactions))
+#8 C:\laragon\www\karastore\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\laragon\www\karastore\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 C:\laragon\www\karastore\system\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\...')
+#11 {main}
+CRITICAL - 2023-06-15 07:56:07 --> Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user ''@'localhost' (using password: NO)
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `transactions_games`
+WHERE `transaction_id` = :transaction_id:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Model.php(268): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(656): CodeIgniter\Model->doFirst()
+ 5 APPPATH\Controllers\CheckTransactions.php(27): CodeIgniter\BaseModel->first()
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\CheckTransactions->checkTransactionsCode()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CheckTransactions))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\karastore\\public\\index.php')
+ERROR - 2023-06-15 07:56:12 --> Error connecting to the database: mysqli_sql_exception: Access denied for user ''@'localhost' (using password: NO) in C:\laragon\www\karastore\system\Database\MySQLi\Connection.php:174
+Stack trace:
+#0 C:\laragon\www\karastore\system\Database\MySQLi\Connection.php(174): mysqli->real_connect('localhost', '', '', '', 3306, '', 0)
+#1 C:\laragon\www\karastore\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\laragon\www\karastore\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\laragon\www\karastore\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\laragon\www\karastore\system\Model.php(268): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\karastore\system\BaseModel.php(656): CodeIgniter\Model->doFirst()
+#6 C:\laragon\www\karastore\app\Controllers\CheckTransactions.php(27): CodeIgniter\BaseModel->first()
+#7 C:\laragon\www\karastore\system\CodeIgniter.php(934): App\Controllers\CheckTransactions->checkTransactionsCode()
+#8 C:\laragon\www\karastore\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CheckTransactions))
+#9 C:\laragon\www\karastore\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\laragon\www\karastore\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 C:\laragon\www\karastore\system\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\...')
+#12 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user ''@'localhost' (using password: NO) in C:\laragon\www\karastore\system\Database\MySQLi\Connection.php:218
+Stack trace:
+#0 C:\laragon\www\karastore\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\laragon\www\karastore\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\laragon\www\karastore\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\laragon\www\karastore\system\Model.php(268): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\laragon\www\karastore\system\BaseModel.php(656): CodeIgniter\Model->doFirst()
+#5 C:\laragon\www\karastore\app\Controllers\CheckTransactions.php(27): CodeIgniter\BaseModel->first()
+#6 C:\laragon\www\karastore\system\CodeIgniter.php(934): App\Controllers\CheckTransactions->checkTransactionsCode()
+#7 C:\laragon\www\karastore\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CheckTransactions))
+#8 C:\laragon\www\karastore\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\laragon\www\karastore\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 C:\laragon\www\karastore\system\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\...')
+#11 {main}
+CRITICAL - 2023-06-15 07:56:12 --> Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user ''@'localhost' (using password: NO)
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `transactions_games`
+WHERE `transaction_id` = :transaction_id:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Model.php(268): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(656): CodeIgniter\Model->doFirst()
+ 5 APPPATH\Controllers\CheckTransactions.php(27): CodeIgniter\BaseModel->first()
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\CheckTransactions->checkTransactionsCode()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CheckTransactions))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\karastore\\public\\index.php')
+ERROR - 2023-06-15 07:56:20 --> Error connecting to the database: mysqli_sql_exception: Access denied for user ''@'localhost' (using password: NO) in C:\laragon\www\karastore\system\Database\MySQLi\Connection.php:174
+Stack trace:
+#0 C:\laragon\www\karastore\system\Database\MySQLi\Connection.php(174): mysqli->real_connect('localhost', '', '', '', 3306, '', 0)
+#1 C:\laragon\www\karastore\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\laragon\www\karastore\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\laragon\www\karastore\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\laragon\www\karastore\system\Model.php(268): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\karastore\system\BaseModel.php(656): CodeIgniter\Model->doFirst()
+#6 C:\laragon\www\karastore\app\Controllers\CheckTransactions.php(27): CodeIgniter\BaseModel->first()
+#7 C:\laragon\www\karastore\system\CodeIgniter.php(934): App\Controllers\CheckTransactions->checkTransactionsCode()
+#8 C:\laragon\www\karastore\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CheckTransactions))
+#9 C:\laragon\www\karastore\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\laragon\www\karastore\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 C:\laragon\www\karastore\system\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\...')
+#12 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user ''@'localhost' (using password: NO) in C:\laragon\www\karastore\system\Database\MySQLi\Connection.php:218
+Stack trace:
+#0 C:\laragon\www\karastore\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\laragon\www\karastore\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\laragon\www\karastore\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\laragon\www\karastore\system\Model.php(268): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\laragon\www\karastore\system\BaseModel.php(656): CodeIgniter\Model->doFirst()
+#5 C:\laragon\www\karastore\app\Controllers\CheckTransactions.php(27): CodeIgniter\BaseModel->first()
+#6 C:\laragon\www\karastore\system\CodeIgniter.php(934): App\Controllers\CheckTransactions->checkTransactionsCode()
+#7 C:\laragon\www\karastore\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CheckTransactions))
+#8 C:\laragon\www\karastore\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\laragon\www\karastore\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 C:\laragon\www\karastore\system\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\...')
+#11 {main}
+CRITICAL - 2023-06-15 07:56:20 --> Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user ''@'localhost' (using password: NO)
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `transactions_games`
+WHERE `transaction_id` = :transaction_id:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Model.php(268): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(656): CodeIgniter\Model->doFirst()
+ 5 APPPATH\Controllers\CheckTransactions.php(27): CodeIgniter\BaseModel->first()
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\CheckTransactions->checkTransactionsCode()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CheckTransactions))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\karastore\\public\\index.php')
+ERROR - 2023-06-15 07:58:42 --> Error connecting to the database: mysqli_sql_exception: Access denied for user ''@'localhost' (using password: NO) in C:\laragon\www\karastore\system\Database\MySQLi\Connection.php:174
+Stack trace:
+#0 C:\laragon\www\karastore\system\Database\MySQLi\Connection.php(174): mysqli->real_connect('localhost', '', '', '', 3306, '', 0)
+#1 C:\laragon\www\karastore\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\laragon\www\karastore\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\laragon\www\karastore\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\laragon\www\karastore\system\Model.php(268): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\karastore\system\BaseModel.php(656): CodeIgniter\Model->doFirst()
+#6 C:\laragon\www\karastore\app\Controllers\CheckTransactions.php(28): CodeIgniter\BaseModel->first()
+#7 C:\laragon\www\karastore\system\CodeIgniter.php(934): App\Controllers\CheckTransactions->checkTransactionsCode()
+#8 C:\laragon\www\karastore\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CheckTransactions))
+#9 C:\laragon\www\karastore\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\laragon\www\karastore\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 C:\laragon\www\karastore\system\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\...')
+#12 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user ''@'localhost' (using password: NO) in C:\laragon\www\karastore\system\Database\MySQLi\Connection.php:218
+Stack trace:
+#0 C:\laragon\www\karastore\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\laragon\www\karastore\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\laragon\www\karastore\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\laragon\www\karastore\system\Model.php(268): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\laragon\www\karastore\system\BaseModel.php(656): CodeIgniter\Model->doFirst()
+#5 C:\laragon\www\karastore\app\Controllers\CheckTransactions.php(28): CodeIgniter\BaseModel->first()
+#6 C:\laragon\www\karastore\system\CodeIgniter.php(934): App\Controllers\CheckTransactions->checkTransactionsCode()
+#7 C:\laragon\www\karastore\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CheckTransactions))
+#8 C:\laragon\www\karastore\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\laragon\www\karastore\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 C:\laragon\www\karastore\system\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\...')
+#11 {main}
+CRITICAL - 2023-06-15 07:58:42 --> Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user ''@'localhost' (using password: NO)
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `transactions_games`
+WHERE `transaction_id` = :transaction_id:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Model.php(268): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(656): CodeIgniter\Model->doFirst()
+ 5 APPPATH\Controllers\CheckTransactions.php(28): CodeIgniter\BaseModel->first()
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\CheckTransactions->checkTransactionsCode()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CheckTransactions))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\karastore\\public\\index.php')
+ERROR - 2023-06-15 07:59:00 --> Error connecting to the database: mysqli_sql_exception: Access denied for user ''@'localhost' (using password: NO) in C:\laragon\www\karastore\system\Database\MySQLi\Connection.php:174
+Stack trace:
+#0 C:\laragon\www\karastore\system\Database\MySQLi\Connection.php(174): mysqli->real_connect('localhost', '', '', '', 3306, '', 0)
+#1 C:\laragon\www\karastore\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\laragon\www\karastore\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\laragon\www\karastore\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\laragon\www\karastore\system\Model.php(268): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\karastore\system\BaseModel.php(656): CodeIgniter\Model->doFirst()
+#6 C:\laragon\www\karastore\app\Controllers\CheckTransactions.php(28): CodeIgniter\BaseModel->first()
+#7 C:\laragon\www\karastore\system\CodeIgniter.php(934): App\Controllers\CheckTransactions->checkTransactionsCode()
+#8 C:\laragon\www\karastore\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CheckTransactions))
+#9 C:\laragon\www\karastore\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\laragon\www\karastore\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 C:\laragon\www\karastore\system\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\...')
+#12 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user ''@'localhost' (using password: NO) in C:\laragon\www\karastore\system\Database\MySQLi\Connection.php:218
+Stack trace:
+#0 C:\laragon\www\karastore\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\laragon\www\karastore\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\laragon\www\karastore\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\laragon\www\karastore\system\Model.php(268): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\laragon\www\karastore\system\BaseModel.php(656): CodeIgniter\Model->doFirst()
+#5 C:\laragon\www\karastore\app\Controllers\CheckTransactions.php(28): CodeIgniter\BaseModel->first()
+#6 C:\laragon\www\karastore\system\CodeIgniter.php(934): App\Controllers\CheckTransactions->checkTransactionsCode()
+#7 C:\laragon\www\karastore\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CheckTransactions))
+#8 C:\laragon\www\karastore\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\laragon\www\karastore\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 C:\laragon\www\karastore\system\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\...')
+#11 {main}
+CRITICAL - 2023-06-15 07:59:00 --> Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user ''@'localhost' (using password: NO)
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `transactions_games`
+WHERE `transaction_id` = :transaction_id:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Model.php(268): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(656): CodeIgniter\Model->doFirst()
+ 5 APPPATH\Controllers\CheckTransactions.php(28): CodeIgniter\BaseModel->first()
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\CheckTransactions->checkTransactionsCode()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CheckTransactions))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\karastore\\public\\index.php')
+ERROR - 2023-06-15 08:01:39 --> Error connecting to the database: mysqli_sql_exception: Access denied for user ''@'localhost' (using password: NO) in C:\laragon\www\karastore\system\Database\MySQLi\Connection.php:174
+Stack trace:
+#0 C:\laragon\www\karastore\system\Database\MySQLi\Connection.php(174): mysqli->real_connect('localhost', '', '', '', 3306, '', 0)
+#1 C:\laragon\www\karastore\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\laragon\www\karastore\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\laragon\www\karastore\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\laragon\www\karastore\system\Model.php(268): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\karastore\system\BaseModel.php(656): CodeIgniter\Model->doFirst()
+#6 C:\laragon\www\karastore\app\Controllers\CheckTransactions.php(28): CodeIgniter\BaseModel->first()
+#7 C:\laragon\www\karastore\system\CodeIgniter.php(934): App\Controllers\CheckTransactions->checkTransactionsCode()
+#8 C:\laragon\www\karastore\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CheckTransactions))
+#9 C:\laragon\www\karastore\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\laragon\www\karastore\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 C:\laragon\www\karastore\system\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\...')
+#12 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user ''@'localhost' (using password: NO) in C:\laragon\www\karastore\system\Database\MySQLi\Connection.php:218
+Stack trace:
+#0 C:\laragon\www\karastore\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\laragon\www\karastore\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\laragon\www\karastore\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\laragon\www\karastore\system\Model.php(268): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\laragon\www\karastore\system\BaseModel.php(656): CodeIgniter\Model->doFirst()
+#5 C:\laragon\www\karastore\app\Controllers\CheckTransactions.php(28): CodeIgniter\BaseModel->first()
+#6 C:\laragon\www\karastore\system\CodeIgniter.php(934): App\Controllers\CheckTransactions->checkTransactionsCode()
+#7 C:\laragon\www\karastore\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CheckTransactions))
+#8 C:\laragon\www\karastore\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\laragon\www\karastore\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 C:\laragon\www\karastore\system\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\...')
+#11 {main}
+CRITICAL - 2023-06-15 08:01:39 --> Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user ''@'localhost' (using password: NO)
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `transactions_games`
+WHERE `transaction_id` = :transaction_id:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Model.php(268): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(656): CodeIgniter\Model->doFirst()
+ 5 APPPATH\Controllers\CheckTransactions.php(28): CodeIgniter\BaseModel->first()
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\CheckTransactions->checkTransactionsCode()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CheckTransactions))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\karastore\\public\\index.php')
+ERROR - 2023-06-15 08:01:42 --> Error connecting to the database: mysqli_sql_exception: Access denied for user ''@'localhost' (using password: NO) in C:\laragon\www\karastore\system\Database\MySQLi\Connection.php:174
+Stack trace:
+#0 C:\laragon\www\karastore\system\Database\MySQLi\Connection.php(174): mysqli->real_connect('localhost', '', '', '', 3306, '', 0)
+#1 C:\laragon\www\karastore\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\laragon\www\karastore\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\laragon\www\karastore\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\laragon\www\karastore\system\Model.php(268): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\karastore\system\BaseModel.php(656): CodeIgniter\Model->doFirst()
+#6 C:\laragon\www\karastore\app\Controllers\CheckTransactions.php(28): CodeIgniter\BaseModel->first()
+#7 C:\laragon\www\karastore\system\CodeIgniter.php(934): App\Controllers\CheckTransactions->checkTransactionsCode()
+#8 C:\laragon\www\karastore\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CheckTransactions))
+#9 C:\laragon\www\karastore\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\laragon\www\karastore\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 C:\laragon\www\karastore\system\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\...')
+#12 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user ''@'localhost' (using password: NO) in C:\laragon\www\karastore\system\Database\MySQLi\Connection.php:218
+Stack trace:
+#0 C:\laragon\www\karastore\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\laragon\www\karastore\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\laragon\www\karastore\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\laragon\www\karastore\system\Model.php(268): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\laragon\www\karastore\system\BaseModel.php(656): CodeIgniter\Model->doFirst()
+#5 C:\laragon\www\karastore\app\Controllers\CheckTransactions.php(28): CodeIgniter\BaseModel->first()
+#6 C:\laragon\www\karastore\system\CodeIgniter.php(934): App\Controllers\CheckTransactions->checkTransactionsCode()
+#7 C:\laragon\www\karastore\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CheckTransactions))
+#8 C:\laragon\www\karastore\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\laragon\www\karastore\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 C:\laragon\www\karastore\system\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\...')
+#11 {main}
+CRITICAL - 2023-06-15 08:01:42 --> Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user ''@'localhost' (using password: NO)
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `transactions_games`
+WHERE `transaction_id` = :transaction_id:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Model.php(268): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(656): CodeIgniter\Model->doFirst()
+ 5 APPPATH\Controllers\CheckTransactions.php(28): CodeIgniter\BaseModel->first()
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\CheckTransactions->checkTransactionsCode()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CheckTransactions))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\karastore\\public\\index.php')
+ERROR - 2023-06-15 08:02:29 --> Error connecting to the database: mysqli_sql_exception: Access denied for user ''@'localhost' (using password: NO) in C:\laragon\www\karastore\system\Database\MySQLi\Connection.php:174
+Stack trace:
+#0 C:\laragon\www\karastore\system\Database\MySQLi\Connection.php(174): mysqli->real_connect('localhost', '', '', '', 3306, '', 0)
+#1 C:\laragon\www\karastore\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\laragon\www\karastore\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\laragon\www\karastore\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\laragon\www\karastore\system\Model.php(268): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\karastore\system\BaseModel.php(656): CodeIgniter\Model->doFirst()
+#6 C:\laragon\www\karastore\app\Controllers\CheckTransactions.php(28): CodeIgniter\BaseModel->first()
+#7 C:\laragon\www\karastore\system\CodeIgniter.php(934): App\Controllers\CheckTransactions->checkTransactionsCode()
+#8 C:\laragon\www\karastore\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CheckTransactions))
+#9 C:\laragon\www\karastore\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\laragon\www\karastore\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 C:\laragon\www\karastore\system\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\...')
+#12 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user ''@'localhost' (using password: NO) in C:\laragon\www\karastore\system\Database\MySQLi\Connection.php:218
+Stack trace:
+#0 C:\laragon\www\karastore\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\laragon\www\karastore\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\laragon\www\karastore\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\laragon\www\karastore\system\Model.php(268): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\laragon\www\karastore\system\BaseModel.php(656): CodeIgniter\Model->doFirst()
+#5 C:\laragon\www\karastore\app\Controllers\CheckTransactions.php(28): CodeIgniter\BaseModel->first()
+#6 C:\laragon\www\karastore\system\CodeIgniter.php(934): App\Controllers\CheckTransactions->checkTransactionsCode()
+#7 C:\laragon\www\karastore\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CheckTransactions))
+#8 C:\laragon\www\karastore\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\laragon\www\karastore\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 C:\laragon\www\karastore\system\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\...')
+#11 {main}
+CRITICAL - 2023-06-15 08:02:29 --> Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user ''@'localhost' (using password: NO)
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `transactions_games`
+WHERE `transaction_id` = :transaction_id:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Model.php(268): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(656): CodeIgniter\Model->doFirst()
+ 5 APPPATH\Controllers\CheckTransactions.php(28): CodeIgniter\BaseModel->first()
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\CheckTransactions->checkTransactionsCode()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CheckTransactions))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\karastore\\public\\index.php')
+ERROR - 2023-06-15 08:02:44 --> Error connecting to the database: mysqli_sql_exception: Access denied for user ''@'localhost' (using password: NO) in C:\laragon\www\karastore\system\Database\MySQLi\Connection.php:174
+Stack trace:
+#0 C:\laragon\www\karastore\system\Database\MySQLi\Connection.php(174): mysqli->real_connect('localhost', '', '', '', 3306, '', 0)
+#1 C:\laragon\www\karastore\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\laragon\www\karastore\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\laragon\www\karastore\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\laragon\www\karastore\system\Model.php(268): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\karastore\system\BaseModel.php(656): CodeIgniter\Model->doFirst()
+#6 C:\laragon\www\karastore\app\Controllers\CheckTransactions.php(29): CodeIgniter\BaseModel->first()
+#7 C:\laragon\www\karastore\system\CodeIgniter.php(934): App\Controllers\CheckTransactions->checkTransactionsCode()
+#8 C:\laragon\www\karastore\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CheckTransactions))
+#9 C:\laragon\www\karastore\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\laragon\www\karastore\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 C:\laragon\www\karastore\system\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\...')
+#12 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user ''@'localhost' (using password: NO) in C:\laragon\www\karastore\system\Database\MySQLi\Connection.php:218
+Stack trace:
+#0 C:\laragon\www\karastore\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\laragon\www\karastore\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\laragon\www\karastore\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\laragon\www\karastore\system\Model.php(268): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\laragon\www\karastore\system\BaseModel.php(656): CodeIgniter\Model->doFirst()
+#5 C:\laragon\www\karastore\app\Controllers\CheckTransactions.php(29): CodeIgniter\BaseModel->first()
+#6 C:\laragon\www\karastore\system\CodeIgniter.php(934): App\Controllers\CheckTransactions->checkTransactionsCode()
+#7 C:\laragon\www\karastore\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CheckTransactions))
+#8 C:\laragon\www\karastore\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\laragon\www\karastore\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 C:\laragon\www\karastore\system\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\...')
+#11 {main}
+CRITICAL - 2023-06-15 08:02:44 --> Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user ''@'localhost' (using password: NO)
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `transactions_games`
+WHERE `transaction_id` = :transaction_id:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Model.php(268): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(656): CodeIgniter\Model->doFirst()
+ 5 APPPATH\Controllers\CheckTransactions.php(29): CodeIgniter\BaseModel->first()
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\CheckTransactions->checkTransactionsCode()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CheckTransactions))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\karastore\\public\\index.php')
+ERROR - 2023-06-15 08:03:00 --> Error connecting to the database: mysqli_sql_exception: Access denied for user ''@'localhost' (using password: NO) in C:\laragon\www\karastore\system\Database\MySQLi\Connection.php:174
+Stack trace:
+#0 C:\laragon\www\karastore\system\Database\MySQLi\Connection.php(174): mysqli->real_connect('localhost', '', '', '', 3306, '', 0)
+#1 C:\laragon\www\karastore\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\laragon\www\karastore\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\laragon\www\karastore\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\laragon\www\karastore\system\Model.php(268): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\karastore\system\BaseModel.php(656): CodeIgniter\Model->doFirst()
+#6 C:\laragon\www\karastore\app\Controllers\CheckTransactions.php(29): CodeIgniter\BaseModel->first()
+#7 C:\laragon\www\karastore\system\CodeIgniter.php(934): App\Controllers\CheckTransactions->checkTransactionsCode()
+#8 C:\laragon\www\karastore\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CheckTransactions))
+#9 C:\laragon\www\karastore\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\laragon\www\karastore\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 C:\laragon\www\karastore\system\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\...')
+#12 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user ''@'localhost' (using password: NO) in C:\laragon\www\karastore\system\Database\MySQLi\Connection.php:218
+Stack trace:
+#0 C:\laragon\www\karastore\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\laragon\www\karastore\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\laragon\www\karastore\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\laragon\www\karastore\system\Model.php(268): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\laragon\www\karastore\system\BaseModel.php(656): CodeIgniter\Model->doFirst()
+#5 C:\laragon\www\karastore\app\Controllers\CheckTransactions.php(29): CodeIgniter\BaseModel->first()
+#6 C:\laragon\www\karastore\system\CodeIgniter.php(934): App\Controllers\CheckTransactions->checkTransactionsCode()
+#7 C:\laragon\www\karastore\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CheckTransactions))
+#8 C:\laragon\www\karastore\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\laragon\www\karastore\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 C:\laragon\www\karastore\system\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\...')
+#11 {main}
+CRITICAL - 2023-06-15 08:03:00 --> Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user ''@'localhost' (using password: NO)
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `transactions_games`
+WHERE `transaction_id` = :transaction_id:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Model.php(268): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(656): CodeIgniter\Model->doFirst()
+ 5 APPPATH\Controllers\CheckTransactions.php(29): CodeIgniter\BaseModel->first()
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\CheckTransactions->checkTransactionsCode()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CheckTransactions))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\karastore\\public\\index.php')
+ERROR - 2023-06-15 08:07:49 --> Error connecting to the database: mysqli_sql_exception: Access denied for user ''@'localhost' (using password: NO) in C:\laragon\www\karastore\system\Database\MySQLi\Connection.php:174
+Stack trace:
+#0 C:\laragon\www\karastore\system\Database\MySQLi\Connection.php(174): mysqli->real_connect('localhost', '', '', '', 3306, '', 0)
+#1 C:\laragon\www\karastore\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\laragon\www\karastore\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\laragon\www\karastore\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\laragon\www\karastore\system\Model.php(268): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\karastore\system\BaseModel.php(656): CodeIgniter\Model->doFirst()
+#6 C:\laragon\www\karastore\app\Models\TransactionsModel.php(16): CodeIgniter\BaseModel->first()
+#7 C:\laragon\www\karastore\app\Controllers\CheckTransactions.php(30): App\Models\TransactionsModel->getTransactionById('asdsadasdasaasd...')
+#8 C:\laragon\www\karastore\system\CodeIgniter.php(934): App\Controllers\CheckTransactions->checkTransactionsCode()
+#9 C:\laragon\www\karastore\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CheckTransactions))
+#10 C:\laragon\www\karastore\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\laragon\www\karastore\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 C:\laragon\www\karastore\system\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\...')
+#13 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user ''@'localhost' (using password: NO) in C:\laragon\www\karastore\system\Database\MySQLi\Connection.php:218
+Stack trace:
+#0 C:\laragon\www\karastore\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\laragon\www\karastore\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\laragon\www\karastore\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\laragon\www\karastore\system\Model.php(268): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\laragon\www\karastore\system\BaseModel.php(656): CodeIgniter\Model->doFirst()
+#5 C:\laragon\www\karastore\app\Models\TransactionsModel.php(16): CodeIgniter\BaseModel->first()
+#6 C:\laragon\www\karastore\app\Controllers\CheckTransactions.php(30): App\Models\TransactionsModel->getTransactionById('asdsadasdasaasd...')
+#7 C:\laragon\www\karastore\system\CodeIgniter.php(934): App\Controllers\CheckTransactions->checkTransactionsCode()
+#8 C:\laragon\www\karastore\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CheckTransactions))
+#9 C:\laragon\www\karastore\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\laragon\www\karastore\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 C:\laragon\www\karastore\system\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\...')
+#12 {main}
+CRITICAL - 2023-06-15 08:07:49 --> Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user ''@'localhost' (using password: NO)
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `transactions_games`
+WHERE `transaction_id` = :transaction_id:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Model.php(268): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(656): CodeIgniter\Model->doFirst()
+ 5 APPPATH\Models\TransactionsModel.php(16): CodeIgniter\BaseModel->first()
+ 6 APPPATH\Controllers\CheckTransactions.php(30): App\Models\TransactionsModel->getTransactionById('asdsadasdasaasdasdsdas')
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\CheckTransactions->checkTransactionsCode()
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CheckTransactions))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\karastore\\public\\index.php')
+ERROR - 2023-06-15 08:07:52 --> Error connecting to the database: mysqli_sql_exception: Access denied for user ''@'localhost' (using password: NO) in C:\laragon\www\karastore\system\Database\MySQLi\Connection.php:174
+Stack trace:
+#0 C:\laragon\www\karastore\system\Database\MySQLi\Connection.php(174): mysqli->real_connect('localhost', '', '', '', 3306, '', 0)
+#1 C:\laragon\www\karastore\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\laragon\www\karastore\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\laragon\www\karastore\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\laragon\www\karastore\system\Model.php(268): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\karastore\system\BaseModel.php(656): CodeIgniter\Model->doFirst()
+#6 C:\laragon\www\karastore\app\Models\TransactionsModel.php(16): CodeIgniter\BaseModel->first()
+#7 C:\laragon\www\karastore\app\Controllers\CheckTransactions.php(30): App\Models\TransactionsModel->getTransactionById('asdsadasdasaasd...')
+#8 C:\laragon\www\karastore\system\CodeIgniter.php(934): App\Controllers\CheckTransactions->checkTransactionsCode()
+#9 C:\laragon\www\karastore\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CheckTransactions))
+#10 C:\laragon\www\karastore\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\laragon\www\karastore\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 C:\laragon\www\karastore\system\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\...')
+#13 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user ''@'localhost' (using password: NO) in C:\laragon\www\karastore\system\Database\MySQLi\Connection.php:218
+Stack trace:
+#0 C:\laragon\www\karastore\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\laragon\www\karastore\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\laragon\www\karastore\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\laragon\www\karastore\system\Model.php(268): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\laragon\www\karastore\system\BaseModel.php(656): CodeIgniter\Model->doFirst()
+#5 C:\laragon\www\karastore\app\Models\TransactionsModel.php(16): CodeIgniter\BaseModel->first()
+#6 C:\laragon\www\karastore\app\Controllers\CheckTransactions.php(30): App\Models\TransactionsModel->getTransactionById('asdsadasdasaasd...')
+#7 C:\laragon\www\karastore\system\CodeIgniter.php(934): App\Controllers\CheckTransactions->checkTransactionsCode()
+#8 C:\laragon\www\karastore\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CheckTransactions))
+#9 C:\laragon\www\karastore\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\laragon\www\karastore\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 C:\laragon\www\karastore\system\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\...')
+#12 {main}
+CRITICAL - 2023-06-15 08:07:52 --> Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user ''@'localhost' (using password: NO)
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `transactions_games`
+WHERE `transaction_id` = :transaction_id:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Model.php(268): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(656): CodeIgniter\Model->doFirst()
+ 5 APPPATH\Models\TransactionsModel.php(16): CodeIgniter\BaseModel->first()
+ 6 APPPATH\Controllers\CheckTransactions.php(30): App\Models\TransactionsModel->getTransactionById('asdsadasdasaasdasdsdas')
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\CheckTransactions->checkTransactionsCode()
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CheckTransactions))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\karastore\\public\\index.php')
+ERROR - 2023-06-15 08:07:55 --> Error connecting to the database: mysqli_sql_exception: Access denied for user ''@'localhost' (using password: NO) in C:\laragon\www\karastore\system\Database\MySQLi\Connection.php:174
+Stack trace:
+#0 C:\laragon\www\karastore\system\Database\MySQLi\Connection.php(174): mysqli->real_connect('localhost', '', '', '', 3306, '', 0)
+#1 C:\laragon\www\karastore\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\laragon\www\karastore\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\laragon\www\karastore\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\laragon\www\karastore\system\Model.php(268): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\karastore\system\BaseModel.php(656): CodeIgniter\Model->doFirst()
+#6 C:\laragon\www\karastore\app\Models\TransactionsModel.php(16): CodeIgniter\BaseModel->first()
+#7 C:\laragon\www\karastore\app\Controllers\CheckTransactions.php(30): App\Models\TransactionsModel->getTransactionById('asdsadasdasaasd...')
+#8 C:\laragon\www\karastore\system\CodeIgniter.php(934): App\Controllers\CheckTransactions->checkTransactionsCode()
+#9 C:\laragon\www\karastore\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CheckTransactions))
+#10 C:\laragon\www\karastore\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\laragon\www\karastore\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 C:\laragon\www\karastore\system\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\...')
+#13 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user ''@'localhost' (using password: NO) in C:\laragon\www\karastore\system\Database\MySQLi\Connection.php:218
+Stack trace:
+#0 C:\laragon\www\karastore\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\laragon\www\karastore\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\laragon\www\karastore\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\laragon\www\karastore\system\Model.php(268): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\laragon\www\karastore\system\BaseModel.php(656): CodeIgniter\Model->doFirst()
+#5 C:\laragon\www\karastore\app\Models\TransactionsModel.php(16): CodeIgniter\BaseModel->first()
+#6 C:\laragon\www\karastore\app\Controllers\CheckTransactions.php(30): App\Models\TransactionsModel->getTransactionById('asdsadasdasaasd...')
+#7 C:\laragon\www\karastore\system\CodeIgniter.php(934): App\Controllers\CheckTransactions->checkTransactionsCode()
+#8 C:\laragon\www\karastore\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CheckTransactions))
+#9 C:\laragon\www\karastore\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\laragon\www\karastore\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 C:\laragon\www\karastore\system\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\...')
+#12 {main}
+CRITICAL - 2023-06-15 08:07:55 --> Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user ''@'localhost' (using password: NO)
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `transactions_games`
+WHERE `transaction_id` = :transaction_id:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Model.php(268): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(656): CodeIgniter\Model->doFirst()
+ 5 APPPATH\Models\TransactionsModel.php(16): CodeIgniter\BaseModel->first()
+ 6 APPPATH\Controllers\CheckTransactions.php(30): App\Models\TransactionsModel->getTransactionById('asdsadasdasaasdasdsdas')
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\CheckTransactions->checkTransactionsCode()
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CheckTransactions))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\karastore\\public\\index.php')
+ERROR - 2023-06-15 08:08:08 --> Error connecting to the database: mysqli_sql_exception: Access denied for user ''@'localhost' (using password: NO) in C:\laragon\www\karastore\system\Database\MySQLi\Connection.php:174
+Stack trace:
+#0 C:\laragon\www\karastore\system\Database\MySQLi\Connection.php(174): mysqli->real_connect('localhost', '', '', '', 3306, '', 0)
+#1 C:\laragon\www\karastore\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\laragon\www\karastore\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\laragon\www\karastore\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\laragon\www\karastore\system\Model.php(268): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\karastore\system\BaseModel.php(656): CodeIgniter\Model->doFirst()
+#6 C:\laragon\www\karastore\app\Models\TransactionsModel.php(16): CodeIgniter\BaseModel->first()
+#7 C:\laragon\www\karastore\app\Controllers\CheckTransactions.php(30): App\Models\TransactionsModel->getTransactionById('asdsadasdasaasd...')
+#8 C:\laragon\www\karastore\system\CodeIgniter.php(934): App\Controllers\CheckTransactions->checkTransactionsCode()
+#9 C:\laragon\www\karastore\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CheckTransactions))
+#10 C:\laragon\www\karastore\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\laragon\www\karastore\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 C:\laragon\www\karastore\system\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\...')
+#13 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user ''@'localhost' (using password: NO) in C:\laragon\www\karastore\system\Database\MySQLi\Connection.php:218
+Stack trace:
+#0 C:\laragon\www\karastore\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\laragon\www\karastore\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\laragon\www\karastore\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\laragon\www\karastore\system\Model.php(268): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\laragon\www\karastore\system\BaseModel.php(656): CodeIgniter\Model->doFirst()
+#5 C:\laragon\www\karastore\app\Models\TransactionsModel.php(16): CodeIgniter\BaseModel->first()
+#6 C:\laragon\www\karastore\app\Controllers\CheckTransactions.php(30): App\Models\TransactionsModel->getTransactionById('asdsadasdasaasd...')
+#7 C:\laragon\www\karastore\system\CodeIgniter.php(934): App\Controllers\CheckTransactions->checkTransactionsCode()
+#8 C:\laragon\www\karastore\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CheckTransactions))
+#9 C:\laragon\www\karastore\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\laragon\www\karastore\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 C:\laragon\www\karastore\system\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\...')
+#12 {main}
+CRITICAL - 2023-06-15 08:08:08 --> Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user ''@'localhost' (using password: NO)
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `transactions_games`
+WHERE `transaction_id` = :transaction_id:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Model.php(268): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(656): CodeIgniter\Model->doFirst()
+ 5 APPPATH\Models\TransactionsModel.php(16): CodeIgniter\BaseModel->first()
+ 6 APPPATH\Controllers\CheckTransactions.php(30): App\Models\TransactionsModel->getTransactionById('asdsadasdasaasdasdsdas')
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\CheckTransactions->checkTransactionsCode()
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CheckTransactions))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\karastore\\public\\index.php')
+CRITICAL - 2023-06-15 08:16:48 --> Object of class CodeIgniter\Database\MySQLi\Result could not be converted to string
+in APPPATH\Models\TransactionsModel.php on line 19.
+ 1 APPPATH\Controllers\CheckTransactions.php(29): App\Models\TransactionsModel->getTransactionById('f4746dec7ccc')
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\CheckTransactions->checkTransactionsCode()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CheckTransactions))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\karastore\\public\\index.php')
+CRITICAL - 2023-06-15 08:20:14 --> Call to undefined method App\Models\TransactionsModel::last_query
+in SYSTEMPATH\Model.php on line 842.
+ 1 APPPATH\Models\TransactionsModel.php(18): CodeIgniter\Model->__call('last_query', [])
+ 2 APPPATH\Controllers\CheckTransactions.php(29): App\Models\TransactionsModel->getTransactionById('f4746dec7ccc')
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\CheckTransactions->checkTransactionsCode()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CheckTransactions))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\karastore\\public\\index.php')
+CRITICAL - 2023-06-15 08:20:45 --> Call to undefined method App\Models\TransactionsModel::last_query
+in SYSTEMPATH\Model.php on line 842.
+ 1 APPPATH\Models\TransactionsModel.php(18): CodeIgniter\Model->__call('last_query', [])
+ 2 APPPATH\Controllers\CheckTransactions.php(29): App\Models\TransactionsModel->getTransactionById('f4746dec7ccc')
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\CheckTransactions->checkTransactionsCode()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CheckTransactions))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\karastore\\public\\index.php')
+CRITICAL - 2023-06-15 08:20:46 --> Call to undefined method App\Models\TransactionsModel::last_query
+in SYSTEMPATH\Model.php on line 842.
+ 1 APPPATH\Models\TransactionsModel.php(18): CodeIgniter\Model->__call('last_query', [])
+ 2 APPPATH\Controllers\CheckTransactions.php(29): App\Models\TransactionsModel->getTransactionById('f4746dec7ccc')
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\CheckTransactions->checkTransactionsCode()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CheckTransactions))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\karastore\\public\\index.php')
+CRITICAL - 2023-06-15 08:20:46 --> Call to undefined method App\Models\TransactionsModel::last_query
+in SYSTEMPATH\Model.php on line 842.
+ 1 APPPATH\Models\TransactionsModel.php(18): CodeIgniter\Model->__call('last_query', [])
+ 2 APPPATH\Controllers\CheckTransactions.php(29): App\Models\TransactionsModel->getTransactionById('f4746dec7ccc')
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\CheckTransactions->checkTransactionsCode()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CheckTransactions))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\karastore\\public\\index.php')
+CRITICAL - 2023-06-15 08:20:46 --> Call to undefined method App\Models\TransactionsModel::last_query
+in SYSTEMPATH\Model.php on line 842.
+ 1 APPPATH\Models\TransactionsModel.php(18): CodeIgniter\Model->__call('last_query', [])
+ 2 APPPATH\Controllers\CheckTransactions.php(29): App\Models\TransactionsModel->getTransactionById('f4746dec7ccc')
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\CheckTransactions->checkTransactionsCode()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CheckTransactions))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\karastore\\public\\index.php')
+CRITICAL - 2023-06-15 08:23:48 --> Cannot use object of type stdClass as array
+in APPPATH\Controllers\CheckTransactions.php on line 37.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\CheckTransactions->checkTransactionsCode()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CheckTransactions))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\karastore\\public\\index.php')
+ERROR - 2023-06-15 08:49:12 --> mysqli_sql_exception: Column 'price' in field list is ambiguous in C:\laragon\www\karastore\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\laragon\www\karastore\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `transac...', 0)
+#1 C:\laragon\www\karastore\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `transac...')
+#2 C:\laragon\www\karastore\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `transac...')
+#3 C:\laragon\www\karastore\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `transac...', Array, false)
+#4 C:\laragon\www\karastore\system\Model.php(840): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\karastore\app\Models\TransactionsModel.php(18): CodeIgniter\Model->__call('get', Array)
+#6 C:\laragon\www\karastore\app\Controllers\CheckTransactions.php(29): App\Models\TransactionsModel->getTransactionById('f4746dec7ccc')
+#7 C:\laragon\www\karastore\system\CodeIgniter.php(934): App\Controllers\CheckTransactions->checkTransactionsCode()
+#8 C:\laragon\www\karastore\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CheckTransactions))
+#9 C:\laragon\www\karastore\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\laragon\www\karastore\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 C:\laragon\www\karastore\system\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\...')
+#12 {main}
+CRITICAL - 2023-06-15 08:49:12 --> Column 'price' in field list is ambiguous
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `transaction_id`, `price`, `full_name`, `email`, `payment_status`
+FROM `transactions_games`
+LEFT JOIN `games` ON `transactions_games`.`game_id` = `games`.`id`
+WHERE `transactions_games`.`transaction_id` = \'f4746dec7ccc\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `transaction_id`, `price`, `full_name`, `email`, `payment_status`
+FROM `transactions_games`
+LEFT JOIN `games` ON `transactions_games`.`game_id` = `games`.`id`
+WHERE `transactions_games`.`transaction_id` = \'f4746dec7ccc\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `transaction_id`, `price`, `full_name`, `email`, `payment_status`
+FROM `transactions_games`
+LEFT JOIN `games` ON `transactions_games`.`game_id` = `games`.`id`
+WHERE `transactions_games`.`transaction_id` = \'f4746dec7ccc\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `transaction_id`, `price`, `full_name`, `email`, `payment_status`
+FROM `transactions_games`
+LEFT JOIN `games` ON `transactions_games`.`game_id` = `games`.`id`
+WHERE `transactions_games`.`transaction_id` = :transactions_games.transaction_id:', [...], false)
+ 5 SYSTEMPATH\Model.php(840): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Models\TransactionsModel.php(18): CodeIgniter\Model->__call('get', [])
+ 7 APPPATH\Controllers\CheckTransactions.php(29): App\Models\TransactionsModel->getTransactionById('f4746dec7ccc')
+ 8 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\CheckTransactions->checkTransactionsCode()
+ 9 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CheckTransactions))
+10 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\karastore\\public\\index.php')
+CRITICAL - 2023-06-15 08:50:51 --> Call to undefined method App\Models\TransactionsModel::last_query
+in SYSTEMPATH\Model.php on line 842.
+ 1 APPPATH\Models\TransactionsModel.php(20): CodeIgniter\Model->__call('last_query', [])
+ 2 APPPATH\Controllers\CheckTransactions.php(29): App\Models\TransactionsModel->getTransactionById('f4746dec7ccc')
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\CheckTransactions->checkTransactionsCode()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CheckTransactions))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\karastore\\public\\index.php')
